@@ -1,7 +1,20 @@
 {
-  "name": "chatty",
+  "name": "cha-tty",
   "version": "0.0.1",
-  "description": "my first socket.io app",
+  "description": "My first socket.io app",
+  "repository": {
+    "type": "git",
+    "url":"https://github.com/Thomas-Elder/cha-tty"
+  },
+  "author":{
+    "name":"Thomas",
+    "email":"thombsaway@gmail.com"
+  }, 
+  "license":"MIT",
+  
+  "engines":{
+    "node":">=4.2.4"
+  },
   "scripts": {
     "start": "node app.js",
     "test": "jasmine-node --verbose --captureExceptions --forceexit ./spec"
