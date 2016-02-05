@@ -130,5 +130,23 @@ describe('Server',
               done();
           });
       });
+      
+      it('should broadcast a "stop typing" event when a "stop typing" event is emitted by the client.',
+        function(done){
+          socket_emit.emit('stop typing');
+          socket_rcv.on('stop typing', 
+            function(){
+              done();
+          });
+      });
+      
+      it('should broadcast a "disconnect" event when a user leaves the chat.',
+        function(done){
+          socket_emit.close();
+          socket_rcv.on('disconnect', 
+            function(){
+              done();
+          });
+      });
   });
 });
