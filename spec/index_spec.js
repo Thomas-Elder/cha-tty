@@ -7,4 +7,10 @@ describe('Server',
     function(done){
       done();
   });
+  
+  it('Should fail this test for funsies',
+    function(done){
+      expect(2).toEqual(3);
+      done();
+  });
 });
