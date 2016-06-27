@@ -140,10 +140,11 @@ describe('Server',
           });
       });
       
-      it('should broadcast a "disconnect" event when a user leaves the chat.',
+      it('should broadcast a "user left" event when a user leaves the chat.',
         function(done){
-          socket_emit.close();
-          socket_rcv.on('disconnect', 
+          
+          socket_emit.disconnect();
+          socket_rcv.on('user left', 
             function(){
               done();
           });

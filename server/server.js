@@ -78,15 +78,16 @@ exports.Server = (function(){
       // Let everyone know user has left the building
       socket.on('disconnect', 
         function () {
+
           if (addedUser) {
             --numUsers;
-
-            socket.broadcast.emit('user left', 
-              {
-                username: socket.username,
-                numUsers: numUsers
-            });
           }
+
+          socket.broadcast.emit('user left', 
+            {
+              username: socket.username,
+              numUsers: numUsers
+            });
       });
     });
   }
